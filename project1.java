@@ -1,7 +1,7 @@
 package bean.user;
 
 public class project1 {
-    private int num;
+    private int num1, num2;
     private int startNum;
     private int endNum;
     
@@ -18,7 +18,7 @@ public class project1 {
 		return endNum;
 	}
 	public int getNum() {
-		num = (int)(Math.random()*(endNum-startNum)) + startNum;
-		return num;
+		num1, num2 = (int)(Math.random()*(endNum-startNum)) + startNum;
+		return startNum;
 	}
 }
