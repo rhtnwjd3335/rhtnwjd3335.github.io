@@ -1,44 +1,44 @@
 package bean.user;
+import java.util.Scanner;
 
 public class project4 {
-	private int result=0;
-	private int i;
-	private int n;
-	private int j;
-	
-	public void setI(int i) {
-		this.i = i;
+	 
+    public static boolean[] prime;	
+	public static void main(String[] args) {
+ 
+		Scanner in = new Scanner(System.in);
+        
+		int N = in.nextInt();
+		
+		make_prime(N);
+ 
+		for(int i = 0; i < prime.length; i++) {
+			if(prime[i] == false) {	
+				System.out.println(i);
+			}
+		}
 	}
-	public int getI() {
-		return i;
-	}
-	public void setN(int n) {
-		this.n = n;
-	}
-	public int getN() {
-		return n;
-	}
-	public void setJ(int j) {
-		this.j = j;
-	}
-	public int getJ() {
-		return j;
-	}
-	public void setResult(int result) {
-		this.result = result;
-	}
-	public int getResult() {
-		for(int i=2; i<=n; i++) {
-            boolean flag = true;
-            for(int j=2; j<Math.sqrt(i); j++) { //두 번째 방법에서는 j<i 부분을 j<Math.sqrt(i) 로 바꾼다.
-                if(i%j==0) {
-                    flag = false;
-                    break;
-                }
-            }
-            
-            if(flag==true) result++;
-        }
-		return result;
+ 
+	public static void make_prime(int N) {
+		
+		prime = new boolean[N + 1];	
+ 
+		if(N < 2) {
+			return;
+		}
+        
+		prime[0] = prime[1] = true;
+		
+        
+		for(int i = 2; i <= Math.sqrt(N); i++) {
+        
+			if(prime[i] == true) {
+				continue;
+			}
+        
+			for(int j = i * i; j < prime.length; j = j+i) {
+				prime[j] = true;
+			}
+		}
 	}
 }
