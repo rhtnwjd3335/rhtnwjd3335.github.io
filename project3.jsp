@@ -6,7 +6,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <jsp:useBean id="project3" class="bean.user.project3">
-<jsp:setProperty name="project3" property="sum"/>
+<jsp:setProperty name="project3" property="num1"/>
+<jsp:setProperty name="project3" property="num2"/>
 </jsp:useBean>
 <title>과제 3</title>
 </head>
