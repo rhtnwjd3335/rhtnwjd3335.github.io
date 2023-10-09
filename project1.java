@@ -38,14 +38,14 @@ public class project1 {
 		this.max = max;
 	}
 	public int getMax() {
-		max=endNum;
+		max=num2;
 		return max;
 	}
 	public void setMin(int min) {
 		this.min = min;
 	}
 	public int getMin() {
-		min=startNum;
+		min=num1;
 		return min;
 	}
 }
