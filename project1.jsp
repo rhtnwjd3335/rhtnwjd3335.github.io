@@ -17,8 +17,8 @@
 숫자 2:<jsp:getProperty property="endNum" name="project1"/><br/>
 난수1 : <jsp:getProperty property="num1" name="project1"/><br/>
 난수2 : <jsp:getProperty property="num2" name="project1"/><br/>
-최대값 : <jsp:getProperty property="num1" name="project1"/><br/>
-최소값 : <jsp:getProperty property="num2" name="project1"/><br/>
+최소값 : <jsp:getProperty property="min" name="project1"/><br/>
+최대값 : <jsp:getProperty property="max" name="project1"/><br/>
 
 <a href=project1.html> 다시 숫자 입력하기</a>
 </body>
